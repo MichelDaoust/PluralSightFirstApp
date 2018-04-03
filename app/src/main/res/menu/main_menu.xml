@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/menuSplit"
+           android:icon="@android:drawable/ic_menu_preferences"
+           android:onClick="onMenuSplit"
+           android:title="Split"/>
+    <item android:id="@+id/menuDynamic"
+          android:icon="@android:drawable/ic_menu_rotate"
+          android:onClick="onMenuDynamic"
+          android:title="Dynamic"/>
+    <item android:id="@+id/menuQuit"
+          android:icon="@android:drawable/ic_lock_power_off"
+          android:onClick="onMenuQuit"
+          android:title="Exit"/>
+</menu>
