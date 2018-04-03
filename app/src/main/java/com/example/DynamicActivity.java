@@ -12,9 +12,29 @@ import android.os.Bundle;
  * Time: 4:52 PM
  * To change this template use File | Settings | File Templates.
  */
-public class DynamicActivity extends Activity{
+public class DynamicActivity extends Activity implements CourseFragmentCoordinator {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.dynamic_activity);
+
     }
 
+    @Override
+    public void onSelectedCourseChanged(int courseIndex) {
+        FragmentManager fragmentManager = getFragmentManager();
+        CourseDescriptionFragment descriptionFragment =
+            (CourseDescriptionFragment) fragmentManager.findFragmentById(R.id.courseDescriptionFragment);
+        if (descriptionFragment != null && descriptionFragment.isVisible())
+        {
+            descriptionFragment.setDisplayedDescription(courseIndex);
+        }
+        else
+        {
+            Intent intent = new Intent(this, DynamicDetailsActivity.class);
+            intent.putExtra("courseIndex", courseIndex);
+            startActivity(intent);
+        }
+
+
+    }
 }

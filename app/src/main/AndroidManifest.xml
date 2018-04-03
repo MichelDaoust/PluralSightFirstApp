@@ -1,15 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example">
 
-    <application android:label="FragmentEx" android:icon="@drawable/ic_launcher">
-        <activity android:name="MyActivity"
+    <application
+        android:icon="@drawable/ic_launcher"
+        android:label="FragmentEx">
+        <activity
+            android:name=".MyActivity"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SplitActivity" android:label="SplitActivity"/>
-        <activity android:name=".DynamicActivity" android:label="DynamicActivity"/>
+        <activity
+            android:name=".SplitActivity"
+            android:label="SplitActivity" />
+        <activity
+            android:name=".DynamicActivity"
+            android:label="DynamicActivity" />
+        <activity android:name=".DynamicDetailsActivity"></activity>
     </application>
+
 </manifest>
